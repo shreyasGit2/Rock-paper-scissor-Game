@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css/RcPaSi.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="playGame('rock')" class="move-button">
+      <img src="images/rock-emoji.png" class="move-icon">
+    </button >
+
+    <button onclick="playGame('Paper')" class="move-button">
+      <img src="images/paper-emoji.png" class="move-icon"> 
+    </button>
+
+    <button onclick="playGame('Scissor')" class="move-button">
+      <img src="images/Scissor-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result-line"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button class="reset-score"  onclick="
+     score.wins = 0;
+     score.losses = 0;
+     score.ties = 0;
+     localStorage.removeItem('score');
+     updateScoreElement();
+    ">Reset Score
+    </button>
+    
+    
+    <script src="scripts/RcPaSi.js"></script>
+  </body>
+</html>
