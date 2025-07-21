@@ -50,15 +50,15 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
         if(result === 'You win')
         {
-          score.wins = score.wins + 1;
+          score.wins += 1;
         }
         else if(result === 'You Loose')
         {
-          score.losses = score.wins + 1;
+          score.losses += 1;
         }
         else if(result === 'Tie')
         {
-          score.ties = score.wins + 1;
+          score.ties += 1;
         }
 
         localStorage.setItem('score' , JSON.stringify(score));
